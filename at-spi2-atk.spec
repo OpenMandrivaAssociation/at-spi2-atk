@@ -9,7 +9,7 @@ URL:            http://www.linuxfoundation.org/en/AT-SPI_on_D-Bus
 Source0:        http://download.gnome.org/sources/at-spi2-atk/0.1/%{name}-%{version}.tar.bz2
 #gw from Fedora: add mising desktop file
 Patch:		at-spi2-atk-fix-build.patch
-
+BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires:  at-spi2-core
 BuildRequires:  dbus-glib-devel
 BuildRequires:  libxml2-devel
