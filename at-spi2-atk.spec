@@ -1,5 +1,5 @@
 Name:           at-spi2-atk
-Version:        0.1.8
+Version:        0.3.5
 Release:        %mkrel 1
 Summary:        A GTK+ module that bridges ATK to D-Bus at-spi
 
@@ -14,7 +14,6 @@ BuildRequires:  at-spi2-core
 BuildRequires:  dbus-glib-devel
 BuildRequires:  libxml2-devel
 BuildRequires:  atk-devel
-BuildRequires:  gtk2-devel
 
 Requires:       at-spi2-core
 
@@ -45,19 +44,24 @@ sed -i 's|^runpath_var=LD_RUN_PATH|runpath_var=DIE_RPATH_DIE|g' libtool
 
 
 %install
-rm -rf $RPM_BUILD_ROOT
+rm -rf $RPM_BUILD_ROOT %name.lang
 %makeinstall_std
 
-rm $RPM_BUILD_ROOT%{_libdir}/gtk-2.0/modules/at-spi-dbus/modules/libatk-bridge.la
+rm $RPM_BUILD_ROOT%{_libdir}/gtk-?.0/modules/at-spi-dbus/modules/libatk-bridge.la
+%find_lang %name
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
+%preun
+%preun_uninstall_gconf_schemas at-spi2
 
-%files
+%files -f %name.lang
 %defattr(-,root,root,-)
 %doc AUTHORS README
+%_sysconfdir/gconf/schemas/at-spi2.schemas
 %{_libdir}/gtk-2.0/modules/at-spi-dbus/modules/libatk-bridge.so
+%{_libdir}/gtk-3.0/modules/at-spi-dbus/modules/libatk-bridge.so
 %dir %{_datadir}/gnome/autostart
 %{_datadir}/gnome/autostart/atk-bridge.desktop
 
