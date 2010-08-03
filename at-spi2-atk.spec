@@ -1,14 +1,15 @@
 Name:           at-spi2-atk
-Version:        0.3.5
+Version:        0.3.6
 Release:        %mkrel 1
 Summary:        A GTK+ module that bridges ATK to D-Bus at-spi
 
 Group:          System/Libraries
 License:        LGPLv2+
 URL:            http://www.linuxfoundation.org/en/AT-SPI_on_D-Bus
-Source0:        http://download.gnome.org/sources/at-spi2-atk/0.1/%{name}-%{version}.tar.bz2
+Source0:        http://ftp.gnome.org/pub/GNOME/sources/%name/%{name}-%{version}.tar.bz2
 #gw from Fedora: add mising desktop file
-Patch:		at-spi2-atk-fix-build.patch
+Patch0:		at-spi2-atk-fix-build.patch
+Patch1:		at-spi2-atk-0.3.5-fix-makefile-tabs.patch
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires:  at-spi2-core
 BuildRequires:  dbus-glib-devel
@@ -35,7 +36,8 @@ D-Bus based at-spi.
 
 %prep
 %setup -q
-%patch -p1
+%apply_patches
+autoreconf -fi
 
 %build
 %configure2_5x --enable-relocate
