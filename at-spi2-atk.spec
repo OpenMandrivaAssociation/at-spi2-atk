@@ -15,6 +15,7 @@ BuildRequires:  at-spi2-core
 BuildRequires:  dbus-glib-devel
 BuildRequires:  libxml2-devel
 BuildRequires:  atk-devel
+BuildRequires:  libGConf2-devel
 BuildRequires:  libx11-devel
 BuildRequires:  intltool
 
