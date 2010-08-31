@@ -1,5 +1,5 @@
 Name:           at-spi2-atk
-Version:        0.3.91
+Version:        0.3.91.1
 Release:        %mkrel 1
 Summary:        A GTK+ module that bridges ATK to D-Bus at-spi
 
