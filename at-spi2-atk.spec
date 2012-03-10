@@ -5,7 +5,7 @@ Summary:	A GTK+ module that bridges ATK to D-Bus at-spi
 Group:		System/Libraries
 License:	LGPLv2+
 URL:		http://www.linuxfoundation.org/en/AT-SPI_on_D-Bus
-Source0:	http://ftp.gnome.org/pub/GNOME/sources/%{name}/%{name}-%{version}.tar.bz2
+Source0:	http://ftp.gnome.org/pub/GNOME/sources/%{name}/%{name}-%{version}.tar.xz
 
 BuildRequires:  intltool
 BuildRequires:	pkgconfig(atk)
