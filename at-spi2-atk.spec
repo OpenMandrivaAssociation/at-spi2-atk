@@ -6,6 +6,7 @@ Group:		System/Libraries
 License:	LGPLv2+
 URL:		http://www.linuxfoundation.org/en/AT-SPI_on_D-Bus
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/%{name}/2.6/%{name}-%{version}.tar.xz
+Source100:	at-spi2-atk.rpmlintrc
 
 BuildRequires:  intltool
 BuildRequires:	pkgconfig(atk)
