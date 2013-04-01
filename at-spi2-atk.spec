@@ -5,6 +5,8 @@
 %define	libname	%mklibname atk-bridge %{api} %{major}
 %define	devname	%mklibname atk-bridge -d
 
+%bcond_with	crosscompile
+
 Summary:	A GTK+ module that bridges ATK to D-Bus at-spi
 Name:		at-spi2-atk
 Version:	2.6.2
@@ -57,6 +59,16 @@ for %{name}.
 %setup -q
 
 %build
+%if %{with crosscompile}
+export ac_cv_alignof_char=1
+export ac_cv_alignof_dbind_pointer=4
+export ac_cv_alignof_dbind_struct=1
+export ac_cv_alignof_dbus_bool_t=4
+export ac_cv_alignof_dbus_int16_t=2
+export ac_cv_alignof_dbus_int32_t=4
+export ac_cv_alignof_dbus_int64_t=4
+export ac_cv_alignof_double=4
+%endif
 %configure2_5x \
 	--disable-rpath
 
