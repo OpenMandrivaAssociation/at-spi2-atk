@@ -1,4 +1,4 @@
----
-sources:
+removed_sources:
   at-spi2-atk-2.6.2.tar.xz: 4de46325b4a682478cf4295237e3359372b81911
-  at-spi2-atk.rpmlintrc:  4b4fd349208abacfca5deae6de18663b856cfc7f
+sources:
+  at-spi2-atk-2.8.1.tar.xz: 73707c46ebb72867e51f9b33abb2d09bfdc4d082

@@ -9,8 +9,8 @@
 
 Summary:	A GTK+ module that bridges ATK to D-Bus at-spi
 Name:		at-spi2-atk
-Version:	2.6.2
-Release:	5
+Version:	2.8.1
+Release:	1
 Group:		System/Libraries
 License:	LGPLv2+
 Url:		http://www.linuxfoundation.org/en/AT-SPI_on_D-Bus
@@ -83,7 +83,6 @@ export ac_cv_alignof_double=4
 %dir %{_libdir}/gtk-2.0/modules
 %{_libdir}/gtk-2.0/modules/libatk-bridge.so
 %{_libdir}/gnome-settings-daemon-3.0/gtk-modules/at-spi2-atk.desktop
-%{_datadir}/glib-2.0/schemas/org.a11y.atspi.gschema.xml
 
 %files -n %{libname}
 %{_libdir}/libatk-bridge-%{api}.so.%{major}*
