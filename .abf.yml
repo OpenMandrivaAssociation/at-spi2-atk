@@ -1,6 +1,7 @@
 removed_sources:
+  at-spi2-atk-2.10.2.tar.xz: 2e9067491eef041b6a8930a77727c0cf8460efe5
   at-spi2-atk-2.6.2.tar.xz: 4de46325b4a682478cf4295237e3359372b81911
   at-spi2-atk-2.8.1.tar.xz: 73707c46ebb72867e51f9b33abb2d09bfdc4d082
   at-spi2-atk-2.9.92.tar.xz: 4be235b06dcb82bda3609b455061907dd711e25a
 sources:
-  at-spi2-atk-2.10.2.tar.xz: 2e9067491eef041b6a8930a77727c0cf8460efe5
+  at-spi2-atk-2.12.0.tar.xz: 8c4364fb8606f5b4a036dfb23dba6d6734e20b59
