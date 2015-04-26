@@ -9,7 +9,7 @@
 
 Summary:	A GTK+ module that bridges ATK to D-Bus at-spi
 Name:		at-spi2-atk
-Version:	2.14.0
+Version:	2.16.0
 Release:	1
 Group:		System/Libraries
 License:	LGPLv2+
@@ -69,7 +69,7 @@ export ac_cv_alignof_dbus_int32_t=4
 export ac_cv_alignof_dbus_int64_t=4
 export ac_cv_alignof_double=4
 %endif
-%configure2_5x \
+%configure \
 	--disable-rpath
 
 %make
