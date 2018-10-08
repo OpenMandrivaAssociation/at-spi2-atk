@@ -9,7 +9,7 @@
 
 Summary:	A GTK+ module that bridges ATK to D-Bus at-spi
 Name:		at-spi2-atk
-Version:	2.26.2
+Version:	2.30.0
 Release:	1
 Group:		System/Libraries
 License:	LGPLv2+
@@ -17,7 +17,7 @@ Url:		http://www.linuxfoundation.org/en/AT-SPI_on_D-Bus
 Source0:	https://download.gnome.org/sources/at-spi2-atk/%url_ver/%{name}-%{version}.tar.xz
 Source100:	at-spi2-atk.rpmlintrc
 
-BuildRequires:  intltool
+BuildRequires:  meson
 BuildRequires:	pkgconfig(atk)
 BuildRequires:	pkgconfig(atspi-2)
 BuildRequires:	pkgconfig(dbus-1)
@@ -59,23 +59,11 @@ for %{name}.
 %setup -q
 
 %build
-%if %{with crosscompile}
-export ac_cv_alignof_char=1
-export ac_cv_alignof_dbind_pointer=4
-export ac_cv_alignof_dbind_struct=1
-export ac_cv_alignof_dbus_bool_t=4
-export ac_cv_alignof_dbus_int16_t=2
-export ac_cv_alignof_dbus_int32_t=4
-export ac_cv_alignof_dbus_int64_t=4
-export ac_cv_alignof_double=4
-%endif
-%configure \
-	--disable-rpath
-
-%make
+%meson
+%meson_build
 
 %install
-%makeinstall_std
+%meson_install
 
 %files
 %doc COPYING AUTHORS README
