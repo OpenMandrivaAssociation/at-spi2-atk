@@ -19,6 +19,7 @@ Source100:	at-spi2-atk.rpmlintrc
 
 BuildRequires:  meson
 BuildRequires:	pkgconfig(atk)
+BuildRequires:	pkgconfig(libxml-2.0)
 BuildRequires:	pkgconfig(atspi-2)
 BuildRequires:	pkgconfig(dbus-1)
 BuildRequires:	pkgconfig(glib-2.0)
