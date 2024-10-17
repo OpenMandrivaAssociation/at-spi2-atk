@@ -20,7 +20,7 @@ Version:	2.38.0
 Release:	5
 Group:		System/Libraries
 License:	LGPLv2.1+
-Url:		http://www.linuxfoundation.org/en/AT-SPI_on_D-Bus
+Url:		https://www.linuxfoundation.org/en/AT-SPI_on_D-Bus
 Source0:	https://download.gnome.org/sources/at-spi2-atk/%url_ver/%{name}-%{version}.tar.xz
 Source100:	at-spi2-atk.rpmlintrc
 
